@@ -20,6 +20,7 @@ namespace MidiToPlist
             //CreateFille("1.csd", Path.GetDirectoryName(filepath), text2);
             if (args.Length >= 1)
             {
+                string back = CreatBackDic(Path.GetDirectoryName(args[0]));
                 //获取拖入的文件
                 foreach (string f in args)
                 {
@@ -28,12 +29,12 @@ namespace MidiToPlist
                     string path = Path.GetDirectoryName(filepath);
                     string filename = Path.GetFileName(filepath);
                     string Extension = Path.GetExtension(filepath);
-
+                    Console.WriteLine("处理中:" + filename);
                     if (Extension == ".csd")
                     {
                         string text = (string)ReadFile(filepath, ReadType.ReadToEnd);
                         text = ReplaceStr(text);
-                        CreateFille(filename, Path.GetDirectoryName(filepath), text);
+                        CreateFille(filename, Path.GetDirectoryName(filepath),back, text);
                     }
                     else
                     {
@@ -45,7 +46,8 @@ namespace MidiToPlist
             }
         }
 
-        static void CreateFille(string filename, string path, string str)
+
+        static string CreatBackDic(string path)
         {
             //创建backup文件夹
             if (!Directory.Exists(path + "//backup"))
@@ -54,11 +56,15 @@ namespace MidiToPlist
                 directoryInfo.Create();
             }
 
-            string t = Regex.Replace(System.DateTime.Now.ToString(), "/|:| ", "-");
-            DirectoryInfo directoryInfo2 = new DirectoryInfo(path + "/backup/" + t);
+            string backuppath = Regex.Replace(System.DateTime.Now.ToString(), "/|:| ", "-");
+            DirectoryInfo directoryInfo2 = new DirectoryInfo(path + "/backup/" + backuppath);
             directoryInfo2.Create();
 
-            string backpath = path + "/backup/" + t + "/" + filename;
+            return backuppath;
+        }
+        static void CreateFille(string filename, string path, string backuppath, string str)
+        {
+            string backpath = path + "/backup/" + backuppath + "/" + filename;
             //复制老文件到backup中
             File.Copy(filename, backpath,true);
 
