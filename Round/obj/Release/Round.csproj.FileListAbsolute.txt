@@ -1,0 +1,12 @@
+D:\DoGame\Round\Round\bin\Release\Round.exe.config
+D:\DoGame\Round\Round\bin\Release\Round.exe
+D:\DoGame\Round\Round\bin\Release\Round.pdb
+D:\DoGame\Round\Round\obj\Release\Round.exe
+D:\DoGame\Round\Round\obj\Release\Round.pdb
+D:\DoGame\Round\Round\obj\Release\Round.csprojResolveAssemblyReference.cache
+D:\GameDO\Round\Round\bin\Release\Round.exe.config
+D:\GameDO\Round\Round\obj\Release\Round.exe
+D:\GameDO\Round\Round\obj\Release\Round.pdb
+D:\GameDO\Round\Round\bin\Release\Round.exe
+D:\GameDO\Round\Round\bin\Release\Round.pdb
+D:\GameDO\Round\Round\obj\Release\Round.csprojResolveAssemblyReference.cache

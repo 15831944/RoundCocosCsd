@@ -1,0 +1,12 @@
+D:\DoGame\Round\Round\bin\Debug\Round.exe.config
+D:\DoGame\Round\Round\bin\Debug\Round.exe
+D:\DoGame\Round\Round\bin\Debug\Round.pdb
+D:\DoGame\Round\Round\obj\Debug\Round.csprojResolveAssemblyReference.cache
+D:\DoGame\Round\Round\obj\Debug\Round.exe
+D:\DoGame\Round\Round\obj\Debug\Round.pdb
+D:\GameDO\Round\Round\bin\Debug\Round.exe.config
+D:\GameDO\Round\Round\obj\Debug\Round.exe
+D:\GameDO\Round\Round\obj\Debug\Round.pdb
+D:\GameDO\Round\Round\bin\Debug\Round.exe
+D:\GameDO\Round\Round\bin\Debug\Round.pdb
+D:\GameDO\Round\Round\obj\Debug\Round.csprojResolveAssemblyReference.cache
