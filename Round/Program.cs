@@ -54,7 +54,11 @@ namespace MidiToPlist
                 directoryInfo.Create();
             }
 
-            string backpath = path + "/backup/" + filename;
+            string t = Regex.Replace(System.DateTime.Now.ToString(), "/|:| ", "-");
+            DirectoryInfo directoryInfo2 = new DirectoryInfo(path + "/backup/" + t);
+            directoryInfo2.Create();
+
+            string backpath = path + "/backup/" + t + "/" + filename;
             //复制老文件到backup中
             File.Copy(filename, backpath,true);
 
